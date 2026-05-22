@@ -1,4 +1,5 @@
 import { createProduct, getProducts } from "../model/ProductModel.js";
+import { redirectAlert } from "../utils/alerts.js";
 
 let btn_guardar_producto = document.querySelector("#btn_guardar_producto");
 if (btn_guardar_producto) {
@@ -12,6 +13,7 @@ if (btn_guardar_producto) {
     let imagen = document.querySelector("#imagen").value;
     let producto = { id, creadoEn, nombre, descripcion, precio, stock, imagen };
     createProduct(producto);
+    redirectAlert("Producto registrado correctamente", "success", "/src/views/products/list.html")
     // let producto = {
     //   id: id,
     //   creadoEn: creadoEn,
@@ -36,7 +38,7 @@ if (elementos) {
           <td class="px-5 py-4 text-slate-700">${index.descripcion}</td>
           <td class="px-5 py-4">${index.precio}</td>
           <td class="px-5 py-4">100</td>
-          <td class="px-5 py-4 font-mono text-xs text-slate-600"><img src=${index.imagen}></td>
+          <td class="px-5 py-4 font-mono text-xs text-slate-600"><img class="w-1/4" src=${index.imagen}></td>
           <td class="px-5 py-4">
             <span class="inline-flex items-center rounded-full bg-emerald-50 px-2.5 py-1 text-xs font-semibold text-emerald-700">true</span>
           </td>
