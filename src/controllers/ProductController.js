@@ -1,5 +1,6 @@
 import { createProduct, getProducts } from "../model/ProductModel.js";
 import { redirectAlert } from "../utils/alerts.js";
+import { clearStorage } from "../utils/storage.js";
 
 let btn_guardar_producto = document.querySelector("#btn_guardar_producto");
 if (btn_guardar_producto) {
@@ -47,4 +48,12 @@ if (elementos) {
   `;
   });
   elementos.innerHTML = rowProduct;
+}
+
+let btn_limpiar_storage = document.querySelector("#btn_limpiar_storage")
+if(btn_limpiar_storage){
+  btn_limpiar_storage.addEventListener("click", ()=> {
+    clearStorage("productos")
+    redirectAlert("Limpiando Local Storage", "info", "/src/views/products/list.html")
+  })
 }
