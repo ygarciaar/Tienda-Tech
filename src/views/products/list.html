@@ -1,87 +1,100 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Productos | Tienda General</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-  </head>
-  <body class="min-h-screen bg-slate-50 text-slate-900">
-    <div class="min-h-screen">
-      <header class="border-b border-slate-200 bg-white/80 backdrop-blur">
-        <div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6">
-          <a href="../../../index.html" class="flex items-center gap-3">
-            <div class="grid h-10 w-10 place-items-center rounded-xl bg-slate-900 text-white">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                <path d="M7 7h14l-1.5 8.5a2 2 0 0 1-2 1.5H9a2 2 0 0 1-2-1.6L5 3H2" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                <path d="M9 21a1 1 0 1 0 0-2 1 1 0 0 0 0 2Z" fill="currentColor" />
-                <path d="M18 21a1 1 0 1 0 0-2 1 1 0 0 0 0 2Z" fill="currentColor" />
-              </svg>
-            </div>
-            <div>
-              <div class="text-sm font-semibold leading-tight">Tienda General</div>
-              <div class="text-xs text-slate-500">Productos</div>
-            </div>
-          </a>
 
-          <nav class="hidden items-center gap-2 sm:flex">
-            <a href="./list.html" class="rounded-lg bg-slate-900 px-3 py-2 text-sm font-semibold text-white">Productos</a>
-            <a href="../customers/list.html" class="rounded-lg px-3 py-2 text-sm font-medium text-slate-700 hover:bg-slate-100">Clientes</a>
-            <a href="../sales/list.html" class="rounded-lg px-3 py-2 text-sm font-medium text-slate-700 hover:bg-slate-100">Ventas</a>
-          </nav>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Productos | Tienda General</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
 
-          <a href="./form.html" class="inline-flex items-center justify-center rounded-xl bg-slate-900 px-4 py-2 text-sm font-semibold text-white hover:bg-slate-800">
-            Nuevo producto
-          </a>
-        </div>
-      </header>
-
-      <main class="mx-auto max-w-7xl px-4 py-8 pb-24 sm:px-6">
-        <div class="flex items-end justify-between gap-4">
+<body class="min-h-screen bg-slate-50 text-slate-900">
+  <div class="min-h-screen">
+    <header class="border-b border-slate-200 bg-white/80 backdrop-blur">
+      <div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6">
+        <a href="../../../index.html" class="flex items-center gap-3">
+          <div class="grid h-10 w-10 place-items-center rounded-xl bg-slate-900 text-white">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M7 7h14l-1.5 8.5a2 2 0 0 1-2 1.5H9a2 2 0 0 1-2-1.6L5 3H2" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M9 21a1 1 0 1 0 0-2 1 1 0 0 0 0 2Z" fill="currentColor" />
+              <path d="M18 21a1 1 0 1 0 0-2 1 1 0 0 0 0 2Z" fill="currentColor" />
+            </svg>
+          </div>
           <div>
-            <div class="text-xs font-medium text-slate-500">
-              <a href="../../../index.html" class="hover:text-slate-700">Inicio</a>
-              <span class="px-2 text-slate-300">/</span>
-              <span class="text-slate-700">Productos</span>
-            </div>
-            <h1 class="mt-1 text-lg font-semibold">Listado</h1>
+            <div class="text-sm font-semibold leading-tight">Tienda General</div>
+            <div class="text-xs text-slate-500">Productos</div>
           </div>
-          <div class="w-full max-w-sm">
-            <label for="q" class="sr-only">Buscar</label>
-            <input id="q" name="q" placeholder="Buscar por nombre o ID…" class="w-full rounded-xl border border-slate-200 bg-white px-4 py-2 text-sm outline-none ring-slate-200 focus:ring-4" />
-          </div>
-        </div>
+        </a>
 
-        <section class="mt-6 rounded-2xl border border-slate-200 bg-white shadow-sm">
-          <div class="overflow-x-auto">
-            <table class="min-w-full text-left text-sm">
-              <thead class="bg-slate-50 text-xs font-semibold uppercase tracking-wide text-slate-600">
-                <tr>
-                  <th scope="col" class="px-5 py-3">ID</th>
-                  <th scope="col" class="px-5 py-3">Nombre</th>
-                  <th scope="col" class="px-5 py-3">Descripción</th>
-                  <th scope="col" class="px-5 py-3">Precio</th>
-                  <th scope="col" class="px-5 py-3">Stock</th>
-                  <th scope="col" class="px-5 py-3">Imagen</th>
-                  <th scope="col" class="px-5 py-3">Activo</th>
-                  <th scope="col" class="px-5 py-3">Creado en</th>
-                </tr>
-              </thead>
-              <tbody id="elementos" class="divide-y divide-slate-200">
-                
-              </tbody>
-            </table>
-          </div>
-        </section>
-      </main>
+        <nav class="hidden items-center gap-2 sm:flex">
+          <a href="./list.html" class="rounded-lg bg-slate-900 px-3 py-2 text-sm font-semibold text-white">Productos</a>
+          <a href="../customers/list.html"
+            class="rounded-lg px-3 py-2 text-sm font-medium text-slate-700 hover:bg-slate-100">Clientes</a>
+          <a href="../sales/list.html"
+            class="rounded-lg px-3 py-2 text-sm font-medium text-slate-700 hover:bg-slate-100">Ventas</a>
+        </nav>
 
-      <footer class="fixed inset-x-0 bottom-0 border-t border-slate-200 bg-white">
-        <div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 text-xs text-slate-500 sm:px-6">
-          <span>© Tienda General</span>
-          <span>TailwindCSS CDN · Solo HTML</span>
+        <a href="./form.html"
+          class="inline-flex items-center justify-center rounded-xl bg-slate-900 px-4 py-2 text-sm font-semibold text-white hover:bg-slate-800">
+          Nuevo producto
+        </a>
+        <button id="btn_limpiar_storage"
+          class="inline-flex items-center justify-center rounded-xl bg-slate-900 px-4 py-2 text-sm font-semibold text-white hover:bg-slate-800">
+          Limpiar Local Storage
+        </button>
+      </div>
+    </header>
+
+    <main class="mx-auto max-w-7xl px-4 py-8 pb-24 sm:px-6">
+      <div class="flex items-end justify-between gap-4">
+        <div>
+          <div class="text-xs font-medium text-slate-500">
+            <a href="../../../index.html" class="hover:text-slate-700">Inicio</a>
+            <span class="px-2 text-slate-300">/</span>
+            <span class="text-slate-700">Productos</span>
+          </div>
+          <h1 class="mt-1 text-lg font-semibold">Listado</h1>
         </div>
-      </footer>
-    </div>
-    <script type="module" src="../../controllers/ProductController.js"></script>
-  </body>
+        <div class="w-full max-w-sm">
+          <label for="q" class="sr-only">Buscar</label>
+          <input id="q" name="q" placeholder="Buscar por nombre o ID…"
+            class="w-full rounded-xl border border-slate-200 bg-white px-4 py-2 text-sm outline-none ring-slate-200 focus:ring-4" />
+        </div>
+      </div>
+
+      <section class="mt-6 rounded-2xl border border-slate-200 bg-white shadow-sm">
+        <div class="overflow-x-auto">
+          <table class="min-w-full text-left text-sm">
+            <thead class="bg-slate-50 text-xs font-semibold uppercase tracking-wide text-slate-600">
+              <tr>
+                <th scope="col" class="px-5 py-3">ID</th>
+                <th scope="col" class="px-5 py-3">Nombre</th>
+                <th scope="col" class="px-5 py-3">Descripción</th>
+                <th scope="col" class="px-5 py-3">Precio</th>
+                <th scope="col" class="px-5 py-3">Stock</th>
+                <th scope="col" class="px-5 py-3">Imagen</th>
+                <th scope="col" class="px-5 py-3">Activo</th>
+                <th scope="col" class="px-5 py-3">Creado en</th>
+              </tr>
+            </thead>
+            <tbody id="elementos" class="divide-y divide-slate-200">
+
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+
+    <footer class="fixed inset-x-0 bottom-0 border-t border-slate-200 bg-white">
+      <div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 text-xs text-slate-500 sm:px-6">
+        <span>© Tienda General</span>
+        <span>TailwindCSS CDN · Solo HTML</span>
+      </div>
+    </footer>
+  </div>
+  <script type="module" src="../../controllers/ProductController.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+
 </html>

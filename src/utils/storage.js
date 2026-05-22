@@ -1,7 +1,7 @@
 let data = null
 
-export function clearStorage(){
-
+export function clearStorage(llave){
+    localStorage.removeItem(llave)
 }
 export function getStorage(llave){
     return JSON.parse(localStorage.getItem(llave)) || []
