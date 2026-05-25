@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cliente | Tienda General</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+
+  <body class="min-h-screen bg-slate-50 text-slate-900">
+    <div class="min-h-screen">
+      <header class="border-b border-slate-200 bg-white/80 backdrop-blur">
+        <div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6">
+          <a href="../../../index.html" class="flex items-center gap-3">
+            <div class="grid h-10 w-10 place-items-center rounded-xl bg-slate-900 text-white">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M7 7h14l-1.5 8.5a2 2 0 0 1-2 1.5H9a2 2 0 0 1-2-1.6L5 3H2" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M9 21a1 1 0 1 0 0-2 1 1 0 0 0 0 2Z" fill="currentColor" />
+                <path d="M18 21a1 1 0 1 0 0-2 1 1 0 0 0 0 2Z" fill="currentColor" />
+              </svg>
+            </div>
+            <div>
+              <div class="text-sm font-semibold leading-tight">Tienda General</div>
+              <div class="text-xs text-slate-500">Usuarios</div>
+            </div>
+          </a>
+
+          <nav class="hidden items-center gap-2 sm:flex">
+            <a href="../productos/list.html" class="rounded-lg px-3 py-2 text-sm font-medium text-slate-700 hover:bg-slate-100">Productos</a>
+            <a href="../customers/list.html" class="rounded-lg px-3 py-2 text-sm font-medium text-slate-700 hover:bg-slate-100">Clientes</a>
+            <a href="../sales/list.html" class="rounded-lg px-3 py-2 text-sm font-medium text-slate-700 hover:bg-slate-100">Ventas</a>
+          </nav>
+
+          <a
+            href="./list.html"
+            class="inline-flex items-center justify-center rounded-xl border border-slate-200 bg-white px-4 py-2 text-sm font-semibold text-slate-700 hover:bg-slate-50"
+          >
+            Volver
+          </a>
+        </div>
+      </header>
+
+      <main class="mx-auto max-w-7xl px-4 py-8 pb-24 sm:px-6">
+        <div class="mx-auto max-w-3xl">
+          <div>
+            <div class="text-xs font-medium text-slate-500">
+              <a href="../../../index.html" class="hover:text-slate-700">Inicio</a>
+              <span class="px-2 text-slate-300">/</span>
+              <a href="./list.html" class="hover:text-slate-700">Usuarios</a>
+              <span class="px-2 text-slate-300">/</span>
+              <span class="text-slate-700">Nuevo</span>
+            </div>
+            <h1 class="mt-1 text-lg font-semibold">Nuevo usuario</h1>
+          </div>
+
+          <div class="mt-6 rounded-2xl border border-slate-200 bg-white shadow-sm">
+            <form action="#" method="post" class="p-6">
+              <div class="grid gap-6 sm:grid-cols-5">
+                <section class="sm:col-span-3">
+                  <h2 class="text-sm font-semibold text-slate-700">Datos</h2>
+
+                  <div class="mt-4 grid gap-4 sm:grid-cols-2">
+                    <div class="sm:col-span-1">
+                      <label for="idUsuario" class="text-sm font-medium text-slate-700">id</label>
+                      <input
+                        id="idUsuario"
+                        name="idUsuario"
+                        type="number"
+                        placeholder="Autogenerado"
+                        class="mt-1 w-full rounded-xl border border-slate-200 bg-slate-50 px-4 py-2 text-sm text-slate-700 outline-none"
+                        disabled
+                      />
+                    </div>
+
+                    <div class="sm:col-span-1">
+                      <label for="email" class="text-sm font-medium text-slate-700">email</label>
+                      <input
+                        id="email"
+                        name="email"
+                        type="email"
+                        placeholder="maria.lopez@email.com"
+                        class="mt-1 w-full rounded-xl border border-slate-200 bg-white px-4 py-2 text-sm outline-none ring-slate-200 focus:ring-4"
+                      />
+                    </div>
+
+                    <div class="sm:col-span-2">
+                      <label for="contraseña" class="text-sm font-medium text-slate-700">contraseña</label>
+                      <input
+                        id="contraseña"
+                        name="contraseña"
+                        type="password"
+                        placeholder="••••••••"
+                        class="mt-1 w-full rounded-xl border border-slate-200 bg-white px-4 py-2 text-sm outline-none ring-slate-200 focus:ring-4"
+                      />
+                    </div>
+
+                    <div class="sm:col-span-2">
+                      <label for="dirección" class="text-sm font-medium text-slate-700">dirección</label>
+                      <input
+                        id="dirección"
+                        name="dirección"
+                        type="text"
+                        placeholder="Calle 10 # 20-30, Medellín"
+                        class="mt-1 w-full rounded-xl border border-slate-200 bg-white px-4 py-2 text-sm outline-none ring-slate-200 focus:ring-4"
+                      />
+                    </div>
+
+                    <div class="sm:col-span-2">
+                      <label for="telefono" class="text-sm font-medium text-slate-700">telefono</label>
+                      <input
+                        id="telefono"
+                        name="telefono"
+                        type="tel"
+                        placeholder="3001234567"
+                        class="mt-1 w-full rounded-xl border border-slate-200 bg-white px-4 py-2 text-sm outline-none ring-slate-200 focus:ring-4"
+                      />
+                    </div>
+                  </div>
+                </section>
+
+                <aside class="sm:col-span-2">
+                  <h2 class="text-sm font-semibold text-slate-700">Acciones</h2>
+
+                  <div class="mt-4 flex flex-col gap-3">
+                    <a
+                      href="./list.html"
+                      class="inline-flex items-center justify-center rounded-xl border border-slate-200 bg-white px-4 py-2 text-sm font-semibold text-slate-700 hover:bg-slate-50"
+                    >
+                      Cancelar
+                    </a>
+
+                    <button
+                      id="btn_guardar_usuario"
+                      type="button"
+                      class="inline-flex items-center justify-center rounded-xl bg-slate-900 px-4 py-2 text-sm font-semibold text-white hover:bg-slate-800"
+                    >
+                      Guardar
+                    </button>
+                  </div>
+                </aside>
+              </div>
+            </form>
+          </div>
+        </div>
+      </main>
+
+      <footer class="fixed inset-x-0 bottom-0 border-t border-slate-200 bg-white">
+        <div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 text-xs text-slate-500 sm:px-6">
+          <span>© Tienda General</span>
+          <span>TailwindCSS CDN · Solo HTML</span>
+        </div>
+      </footer>
+    </div>
+
+    <script type="module" src="../../controllers/UsuarioController.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  </body>
+</html>
+

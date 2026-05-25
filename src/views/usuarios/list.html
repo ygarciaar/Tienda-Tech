@@ -3,9 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ventas | Tienda General</title>
+    <title>Usuarios | Tienda Tech</title>
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
+
   <body class="min-h-screen bg-slate-50 text-slate-900">
     <div class="min-h-screen">
       <header class="border-b border-slate-200 bg-white/80 backdrop-blur">
@@ -19,20 +20,34 @@
               </svg>
             </div>
             <div>
-              <div class="text-sm font-semibold leading-tight">Tienda General</div>
-              <div class="text-xs text-slate-500">Ventas</div>
+              <div class="text-sm font-semibold leading-tight">Tienda Tech</div>
+              <div class="text-xs text-slate-500">Usuarios</div>
             </div>
           </a>
 
           <nav class="hidden items-center gap-2 sm:flex">
-            <a href="../products/list.html" class="rounded-lg px-3 py-2 text-sm font-medium text-slate-700 hover:bg-slate-100">Productos</a>
-            <a href="../customers/list.html" class="rounded-lg px-3 py-2 text-sm font-medium text-slate-700 hover:bg-slate-100">Clientes</a>
-            <a href="./list.html" class="rounded-lg bg-emerald-600 px-3 py-2 text-sm font-semibold text-white">Ventas</a>
+            <a href="../detallePedido/list.html" class="rounded-lg px-3 py-2 text-sm font-medium text-slate-700 hover:bg-slate-100">DetallePedido</a>
+            <a href="../pedidos/list.html" class="rounded-lg px-3 py-2 text-sm font-medium text-slate-700 hover:bg-slate-100">Pedidos</a>
+            <a href="../productos/list.html" class="rounded-lg px-3 py-2 text-sm font-medium text-slate-700 hover:bg-slate-100">Productos</a>
+            <a href="../proveedores/list.html" class="rounded-lg px-3 py-2 text-sm font-medium text-slate-700 hover:bg-slate-100">Proveedores</a>
+             <a href="../usuarios/list.html" class="rounded-lg px-3 py-2 text-sm font-medium text-slate-700 hover:bg-slate-100">Usuarios</a>
           </nav>
 
-          <a href="./form.html" class="inline-flex items-center justify-center rounded-xl bg-emerald-600 px-4 py-2 text-sm font-semibold text-white hover:bg-emerald-500">
-            Registrar venta
-          </a>
+          <div class="flex items-center gap-3">
+            <a
+              href="./form.html"
+              class="inline-flex items-center justify-center rounded-xl bg-slate-900 px-4 py-2 text-sm font-semibold text-white hover:bg-slate-800"
+            >
+              Registrar usuario
+            </a>
+
+            <button
+              id="btn_limpiar_storage"
+              class="inline-flex items-center justify-center rounded-xl bg-slate-900 px-4 py-2 text-sm font-semibold text-white hover:bg-slate-800"
+            >
+              Limpiar Local Storage
+            </button>
+          </div>
         </div>
       </header>
 
@@ -42,13 +57,19 @@
             <div class="text-xs font-medium text-slate-500">
               <a href="../../../index.html" class="hover:text-slate-700">Inicio</a>
               <span class="px-2 text-slate-300">/</span>
-              <span class="text-slate-700">Ventas</span>
+              <span class="text-slate-700">Usuarios</span>
             </div>
-            <h1 class="mt-1 text-lg font-semibold">Historial</h1>
+            <h1 class="mt-1 text-lg font-semibold">Listado</h1>
           </div>
+
           <div class="w-full max-w-sm">
             <label for="q" class="sr-only">Buscar</label>
-            <input id="q" name="q" placeholder="Buscar por ID o clienteId…" class="w-full rounded-xl border border-slate-200 bg-white px-4 py-2 text-sm outline-none ring-slate-200 focus:ring-4" />
+            <input
+              id="q"
+              name="q"
+              placeholder="Buscar por email o idUsuario…"
+              class="w-full rounded-xl border border-slate-200 bg-white px-4 py-2 text-sm outline-none ring-slate-200 focus:ring-4"
+            />
           </div>
         </div>
 
@@ -57,26 +78,14 @@
             <table class="min-w-full text-left text-sm">
               <thead class="bg-slate-50 text-xs font-semibold uppercase tracking-wide text-slate-600">
                 <tr>
-                  <th scope="col" class="px-5 py-3">ID</th>
-                  <th scope="col" class="px-5 py-3">clienteId</th>
-                  <th scope="col" class="px-5 py-3">Productos</th>
-                  <th scope="col" class="px-5 py-3">Total</th>
-                  <th scope="col" class="px-5 py-3">Estado</th>
-                  <th scope="col" class="px-5 py-3">Fecha</th>
+                  <th scope="col" class="px-5 py-3">idUsuario</th>
+                  <th scope="col" class="px-5 py-3">email</th>
+                  <th scope="col" class="px-5 py-3">dirección</th>
+                  <th scope="col" class="px-5 py-3">teléfono</th>
+                  <th scope="col" class="px-5 py-3">Acción</th>
                 </tr>
               </thead>
-              <tbody class="divide-y divide-slate-200">
-                <tr class="hover:bg-slate-50">
-                  <td class="px-5 py-4 font-mono text-xs text-slate-600">1</td>
-                  <td class="px-5 py-4 font-mono text-xs text-slate-600">1</td>
-                  <td class="px-5 py-4 text-slate-700">2</td>
-                  <td class="px-5 py-4 font-semibold">$15,200</td>
-                  <td class="px-5 py-4">
-                    <span class="inline-flex items-center rounded-full bg-emerald-50 px-2.5 py-1 text-xs font-semibold text-emerald-700">completada</span>
-                  </td>
-                  <td class="px-5 py-4 text-slate-700">2025-02-10</td>
-                </tr>
-              </tbody>
+              <tbody id="elementos" class="divide-y divide-slate-200"></tbody>
             </table>
           </div>
         </section>
@@ -89,5 +98,9 @@
         </div>
       </footer>
     </div>
+
+    <script type="module" src="../../controllers/UsuarioController.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   </body>
 </html>
+
