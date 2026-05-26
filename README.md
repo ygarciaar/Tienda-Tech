@@ -1,4 +1,4 @@
-# 🛒 Tienda General — Vanilla JS MVC
+# 🛒 Tienda-Tech
 
 > Aplicación web de tienda de productos generales, construida con **JavaScript Vanilla** bajo el patrón de arquitectura **MVC (Modelo - Vista - Controlador)**, adaptado a un entorno sin conexión a base de datos. Toda la información se gestiona en memoria durante la sesión..
 
@@ -351,14 +351,22 @@ Una vez abierto en el navegador deberías ver:
 
 ---
 
-## 👤 Autor
+## 👤 Autores
 
 | Campo | Detalle |
 |---|---|
-| **Nombre** | Jaime Zapata |
-| **Rol** | Desarrollador Web |
-| **Proyecto** | Tienda General — Vanilla JS MVC |
-| **Año** | 2025 |
+| **Nombre** | Gendris Urbina Urbina |
+| **Rol** | Estudiante |
+
+| **Nombre** | Ariel De La Rosa Reales |
+| **Rol** | Estudiante |
+
+| **Nombre** | Yeison Arbey García Mesa |
+| **Rol** | Estudiante |
+
+| **Proyecto** | Tienda-Tech |
+| **Año** | 2026 |
+
 
 ---
 
