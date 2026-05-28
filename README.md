@@ -1,6 +1,6 @@
 # 🛒 Tienda-Tech
 
-> Aplicación web de tienda de productos generales, construida con **JavaScript Vanilla** bajo el patrón de arquitectura **MVC (Modelo - Vista - Controlador)**, adaptado a un entorno sin conexión a base de datos. Toda la información se gestiona en memoria durante la sesión..
+> Aplicación web de tienda de productos generales, construida con **JavaScript** bajo el patrón de arquitectura **MVC (Modelo - Vista - Controlador)**, adaptado a un entorno sin conexión a base de datos. Toda la información se gestiona en memoria durante la sesión..
 
 ---
 
@@ -28,7 +28,7 @@ Al no depender de una base de datos externa, los datos se inicializan desde los 
 
 | Tecnología | Versión | Rol en el proyecto |
 |---|---|---|
-| **JavaScript (Vanilla)** | ES6+ | Lógica principal: modelos, controladores y manipulación del DOM |
+| **JavaScript** | ES6+ | Lógica principal: modelos, controladores y manipulación del DOM |
 | **HTML5** | — | Estructura semántica de todas las vistas |
 | **CSS3** | — | Estilos base, variables CSS y personalizaciones visuales propias del proyecto |
 | **Tailwind CSS** | v3.x | Framework utilitario para diseño responsivo, espaciado y tipografía |
