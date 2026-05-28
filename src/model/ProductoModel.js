@@ -1,15 +1,15 @@
 import { createStorage } from "../utils/storage.js";
 import { getStorage } from "../utils/storage.js";
 
-let product_model = [];
+let producto_model = [];
 
 export function getProductos(llave) {
-  product_model = getStorage(llave);
-  return product_model;
+  producto_model = getStorage(llave);
+  return producto_model;
 }
 
 export function createProducto(producto) {
-  product_model.push(producto);
-  createStorage("productos", product_model);
+  producto_model.push(producto);
+  createStorage("productos", producto_model);
 }
 
